@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Navbar Section -->
+   <nav class="navbar">
+        
+    <div class="nav-container">
+        <button class="menu-toggle" id="menuToggle">&#9776;</button>   
+  
+      <!-- Left Navigation -->
+     <div class= "nav-links" id="navLinks">
+        
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li class="dropdown">
+            <a href="services.html" id="servicesMenu">Services</a>
+            <ul class="dropdown-menu" id="dropdownMenu">
+              <li><a href="services.html?section=General-Fabrications">General Fabrications</a></li>
+              <li><a href="services.html?section=sheet-facility">Sheet Facility</a></li>
+              <li><a href="services.html?section=bending-facility">Bending Facility</a></li>
+              <li><a href="services.html?section=rolling-facility">Rolling Facility</a></li>
+              <li><a href="services.html?section=blasting-painting">Blasting & Painting</a></li>
+              <li><a href="services.html?section=non-ferrous-welding">Non Ferrous Welding</a></li>
+              <li><a href="services.html?section=pneumatic-testing">Pneumatic Testing</a></li>
+              <li><a href="services.html?section=vacuum-testing">Vacuum Testing</a></li>
+            </ul>
+          </li>
+          <li><a href="careers.html" id="Careers">Careers</a></li>
+          <li><a href="contact.html" id="Contact">Contact</a></li>
+          
+        </ul>
+      </div>
+  
+      <div class="logo">
+        <a href="index.html">
+          <img src="Jewel_logo_withoutBG.png" alt="Jewel Engineering">
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+<!-- Gallery Header -->
+<header class="gallery-header">
+    <h1>Our Manufacturing Excellence</h1>
+    
+  </header>
+  
+  <!-- Photo Gallery Grid -->
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="image d.jpeg" alt="Manufacturing Image 1" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="image e.jpeg" alt="Manufacturing Image 2" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="image f.jpeg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="Image A.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="Image B.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="Image c.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="1.jpeg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="2.jpeg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="3.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="4.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="5.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="6.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="7.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+        <img src="8.jpg" alt="Manufacturing Image 3" onclick="openLightbox(this.src)">
+    </div>
+    
+  </section>
+  
+  
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+  <script> 
+    
+   
+    document.addEventListener("DOMContentLoaded", function () {
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    // Ensure dropdown is hidden on page load
+    dropdownMenu.style.display = "none";
+
+    // Handle hover event to show/hide the dropdown properly
+    const servicesMenu = document.querySelector(".dropdown");
+    servicesMenu.addEventListener("mouseenter", () => {
+        dropdownMenu.style.display = "block";
+        setTimeout(() => {
+            dropdownMenu.style.opacity = "1";
+            dropdownMenu.style.visibility = "visible";
+        }, 10);
+    });
+
+    servicesMenu.addEventListener("mouseleave", () => {
+        dropdownMenu.style.opacity = "0";
+        dropdownMenu.style.visibility = "hidden";
+        setTimeout(() => {
+            dropdownMenu.style.display = "none";
+        }, 300);
+    });
+});  
+document.addEventListener("DOMContentLoaded", function () {
+document.getElementById('menuToggle').addEventListener('click', function () {
+document.getElementById('navLinks').classList.toggle('show');
+});
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+link.addEventListener('click', function () {
+document.getElementById('navLinks').classList.remove('show');
+});
+});
+
+function openLightbox(src) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  lightboxImg.src = src;
+  lightbox.classList.add('show');
+}
+
+// Close the lightbox
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('show');
+}
+    
+    </script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

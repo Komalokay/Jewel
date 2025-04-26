@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        
+        <div class="nav-container">
+            <button class="menu-toggle" id="menuToggle">&#9776;</button>   
+      
+          <!-- Left Navigation -->
+         <div class= "nav-links" id="navLinks">
+            
+            <ul>
+              <li><a href="index.html">About Us</a></li>
+              <li class="dropdown">
+                <a href="services.html" id="servicesMenu">Services</a>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                  <li><a href="services.html?section=General-Fabrications">General Fabrications</a></li>
+                  <li><a href="services.html?section=sheet-facility">Sheet Facility</a></li>
+                  <li><a href="services.html?section=bending-facility">Bending Facility</a></li>
+                  <li><a href="services.html?section=rolling-facility">Rolling Facility</a></li>
+                  <li><a href="services.html?section=blasting-painting">Blasting & Painting</a></li>
+                  <li><a href="services.html?section=non-ferrous-welding">Non Ferrous Welding</a></li>
+                  <li><a href="services.html?section=pneumatic-testing">Pneumatic Testing</a></li>
+                  <li><a href="services.html?section=vacuum-testing">Vacuum Testing</a></li>
+                </ul>
+              </li>
+              <li><a href="gallary.html">Work Gallary</a></li>
+              <li><a href="careers.html" id="Careers">Careers</a></li>
+              <li><a href="contact.html" id="Contact">Contact</a></li>
+              
+            </ul>
+          </div>
+      
+          <div class="logo">
+            <a href="index.html">
+              <img src="Jewel_logo_withoutBG.png" alt="Jewel Engineering">
+            </a>
+          </div>
+
+        </div>
+      </nav>
+    <div class="service-header">
+        <h1>Services</h1>
+    </div>
+
+    <section class="services-container">
+        <div class="service-box">
+            <img src="image1.jpg" alt="GENERAL FABRICATIONS">
+            <div class="service-overlay">
+                <h3>GENERAL FABRICATIONS</h3>
+                <p>We specialize in custom metal fabrication, providing precision-engineered solutions for industrial and structural applications. Our advanced machinery ensures high-quality results, meeting the strictest standards for durability and performance.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="image2.jpg" alt="Sheet Facility">
+            <div class="service-overlay">
+                <h3>SHEET FACILITY</h3>
+                <p>Our sheet metal processing facility can handle sheets up to 12mm thickness and 2500mm length. We offer cutting, shaping, and forming services with high precision, ensuring accurate dimensions for various industrial needs.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="image3.jpg" alt="Bending Facility">
+            <div class="service-overlay">
+                <h3>BENDING FACILITY</h3>
+                <p>With state-of-the-art bending equipment, we can bend sheets up to 16mm thickness and 2500mm length. Our CNC-controlled bending technology guarantees consistent angles and high-quality finishes for all types of sheet metals.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="image4.jpg" alt="Rolling Facility">
+            <div class="service-overlay">
+                <h3>ROLLING FACILITY</h3>
+                <p>Our rolling facility is equipped to roll sheets up to 12mm thick and 2500mm long, enabling smooth and precise curvature for structural and industrial applications. We ensure uniformity and strength in every rolled component.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="image5.jpg" alt="Blasting & Painting">
+            <div class="service-overlay">
+                <h3>BLASTING & PAINTING SERVICES</h3>
+                <p>We provide abrasive blasting for surface preparation and industrial-grade painting to enhance durability and resistance against corrosion. Our finishing solutions ensure long-lasting protection for metal surfaces.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="image3.jpg" alt="Non Ferrous Welding">
+            <div class="service-overlay">
+                <h3>NON FERROUS WELDING</h3>
+                <p>Our expertise in non-ferrous metal welding includes aluminum, copper, and stainless steel. Using specialized techniques, we create strong, corrosion-resistant joints, ensuring reliability for high-performance applications.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="image4.jpg" alt="Pneumatic Testing">
+            <div class="service-overlay">
+                <h3>PNEUMATIC TESTING SERVICES</h3>
+                <p>We conduct high-pressure pneumatic testing to verify the strength and safety of industrial components. Our controlled testing methods ensure leak-proof and structurally sound assemblies for critical applications.</p>
+            </div>
+        </div>
+        <div class="service-box">
+            <img src="image1.jpg" alt="Vacuum Testing">
+            <div class="service-overlay">
+                <h3>VACUUM TESTING SERVICES</h3>
+                <p>Our vacuum testing solutions detect leaks and ensure airtight sealing for pipes, tanks, and pressure vessels. Using advanced vacuum technology, we provide precise and reliable integrity checks for industrial components.</p>
+            </div>
+        </div>
+    </section>
+
+    <script> 
+    
+   
+        document.addEventListener("DOMContentLoaded", function () {
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+    
+        // Ensure dropdown is hidden on page load
+        dropdownMenu.style.display = "none";
+    
+        // Handle hover event to show/hide the dropdown properly
+        const servicesMenu = document.querySelector(".dropdown");
+        servicesMenu.addEventListener("mouseenter", () => {
+            dropdownMenu.style.display = "block";
+            setTimeout(() => {
+                dropdownMenu.style.opacity = "1";
+                dropdownMenu.style.visibility = "visible";
+            }, 10);
+        });
+    
+        servicesMenu.addEventListener("mouseleave", () => {
+            dropdownMenu.style.opacity = "0";
+            dropdownMenu.style.visibility = "hidden";
+            setTimeout(() => {
+                dropdownMenu.style.display = "none";
+            }, 300);
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById('menuToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('show');
+  });
+});
+    
+        
+        </script>
+        <script src="js/script.js"></script>
+
+    </body>
+    </html>
